@@ -8,6 +8,10 @@ class Dish < ApplicationRecord
 
   # Indirect associations
 
+  has_one    :user,
+             :through => :bookmarks,
+             :source => :user
+
   # Validations
 
 end
